@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:45:11 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 13:50:08 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/06 17:06:53 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ ClapTrap::ClapTrap(std::string p_name, int p_hp, int p_ep, int p_atk)
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << "ClapTrap destructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &ref)
+{
+	this->_name = ref._name;
+	this->_hp = ref._hp;
+	this->_ep = ref._ep;
+	this->_atkdmg = ref._atkdmg;
 }
 
 void ClapTrap::attack(const std::string &target)

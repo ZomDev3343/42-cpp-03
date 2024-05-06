@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 13:53:54 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 17:06:33 by truello          ###   ########.fr       */
+/*   Created: 2024/05/06 13:38:22 by truello           #+#    #+#             */
+/*   Updated: 2024/05/06 15:00:52 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "DiamondTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int main(void)
 {
-	public:
-		ScavTrap(void);
-		ScavTrap(const ScavTrap &ref);
-		ScavTrap(std::string p_name, int p_hp, int p_ep, int p_atkdmg);
-		~ScavTrap(void);
+	DiamondTrap dt("bob", 1441, 234, 32);
 
-		void guardGate(void);
-		void attack(std::string &target);
-};
-
-#endif
+	dt.whoAmI();
+}

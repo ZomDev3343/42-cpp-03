@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 11:36:34 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 17:06:47 by truello          ###   ########.fr       */
+/*   Created: 2024/05/06 14:26:05 by truello           #+#    #+#             */
+/*   Updated: 2024/05/06 14:56:34 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include <iostream>
-#include <string.h>
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
-	protected:
+	private:
 		std::string _name;
-		int			_hp;
-		int			_ep;
-		int			_atkdmg;
 	public:
-		ClapTrap(void);
-		ClapTrap(std::string p_name, int p_hp, int p_ep, int p_atk);
-		ClapTrap(const ClapTrap &target);
-		~ClapTrap(void);
+		DiamondTrap(void);
+		DiamondTrap(std::string p_name, int p_hp, int p_ep, int p_atk);
+		~DiamondTrap(void);
 
-		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void whoAmI(void);
+		void attack(std::string &target);
 };
 
 #endif

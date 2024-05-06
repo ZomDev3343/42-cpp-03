@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:58:39 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 14:06:50 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/06 15:10:19 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ ScavTrap::ScavTrap(std::string p_name, int p_hp, int p_ep, int p_atkdmg) : ClapT
 ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap destructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &ref) : ClapTrap(ref)
+{
 }
 
 void ScavTrap::guardGate(void)

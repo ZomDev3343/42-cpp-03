@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:36:34 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 14:03:04 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/06 15:06:20 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ClapTrap
 	public:
 		ClapTrap(void);
 		ClapTrap(std::string p_name, int p_hp, int p_ep, int p_atk);
+		ClapTrap(const ClapTrap &target);
 		~ClapTrap(void);
 
 		void	attack(const std::string &target);
