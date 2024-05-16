@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:36:34 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 15:06:20 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/16 16:21:14 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ class ClapTrap
 		void	attack(const std::string &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+
+		int		getHP(void) const;
+		int		getEP(void) const;
+		int		getAtkDmg(void) const;
+		std::string& getName(void);
 };
 
 #endif
