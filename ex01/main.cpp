@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tohma <tohma@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:38:22 by truello           #+#    #+#             */
-/*   Updated: 2024/05/16 16:20:42 by truello          ###   ########.fr       */
+/*   Updated: 2024/05/17 10:34:33 by tohma            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 int main(void)
 {
 	ScavTrap bob("Bob", 10, 5, 1);
-	ScavTrap billy("Bily", 15, 7, 3);
+	ScavTrap foo;
 
-	bob.attack(billy.getName());
-	billy.beRepaired(1);
-	billy.guardGate();
+	bob.attack(foo.getName());
+	foo.takeDamage(bob.getAtkDmg());
+	foo.beRepaired(1);
+	std::cout << foo.getName() << " is at " << foo.getHP() << " HP" << std::endl;
+	foo.guardGate();
 
 	return (0);
 }
