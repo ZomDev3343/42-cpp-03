@@ -1,7 +1,7 @@
 SRC=$(shell find . -name \*.cpp -type f -print)
 OBJ=$(patsubst %.cpp, %.o,$(SRC))
 NAME=weird
-FLAGS=-Wall -Werror -Wextra -std=c++98
+FLAGS=-Wall -Werror -Wextra -std=c++98 -Wshadow
 
 all:
 	make $(NAME)
