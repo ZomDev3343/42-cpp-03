@@ -6,13 +6,13 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 14:26:37 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 14:59:29 by truello          ###   ########.fr       */
+/*   Updated: 2024/07/04 13:53:19 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap(void) : ScavTrap(), FragTrap()
 {
 	this->_name = "Foo";
 	ClapTrap::_name = "Foo_clap_name";
@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap(void) : FragTrap(), ScavTrap()
 }
 
 DiamondTrap::DiamondTrap(std::string p_name, int p_hp, int p_ep, int p_atk)
-	: FragTrap(p_name, p_hp, p_ep, p_atk), ScavTrap(p_name, p_hp, p_ep, p_atk)
+	: ScavTrap(p_name, p_hp, p_ep, p_atk), FragTrap(p_name, p_hp, p_ep, p_atk)
 {
 	this->_name = p_name;
 	ClapTrap::_name = std::string(p_name + "_clap_name");

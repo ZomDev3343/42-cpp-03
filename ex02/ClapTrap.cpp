@@ -6,7 +6,7 @@
 /*   By: truello <truello@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:45:11 by truello           #+#    #+#             */
-/*   Updated: 2024/05/06 15:11:13 by truello          ###   ########.fr       */
+/*   Updated: 2024/07/04 13:50:48 by truello          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " is already dead!" << std::endl;
 		return ;
 	}
-	if (this->_hp - amount < 0)
+	if ((int) (this->_hp - amount) < 0)
 		this->_hp = 0;
 	else
 		this->_hp -= amount;
